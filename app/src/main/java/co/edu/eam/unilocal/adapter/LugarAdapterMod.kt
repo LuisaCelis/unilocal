@@ -16,11 +16,15 @@ import co.edu.eam.unilocal.bd.Categorias
 import co.edu.eam.unilocal.databinding.ItemLugarBinding
 import co.edu.eam.unilocal.R
 import co.edu.eam.unilocal.bd.Comentarios
+import co.edu.eam.unilocal.databinding.FragmentInfoLugarBinding
+import co.edu.eam.unilocal.databinding.ItemModBinding
+import co.edu.eam.unilocal.bd.Lugares
+import co.edu.eam.unilocal.model.EstadoLugar
 
 class LugarAdapterMod (private var lugares:ArrayList<Lugar>): RecyclerView.Adapter<LugarAdapterMod.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = ItemLugarBinding.inflate( LayoutInflater.from(parent.context), parent, false )
+        val v = ItemModBinding.inflate( LayoutInflater.from(parent.context), parent, false )
         return ViewHolder(v)
     }
 
@@ -30,7 +34,7 @@ class LugarAdapterMod (private var lugares:ArrayList<Lugar>): RecyclerView.Adapt
 
     override fun getItemCount() = lugares.size
 
-    inner class ViewHolder(private var view:ItemLugarBinding):RecyclerView.ViewHolder(view.root), View.OnClickListener {
+    inner class ViewHolder(private var view:ItemModBinding):RecyclerView.ViewHolder(view.root), View.OnClickListener {
 
         private var codigoLugar: Int = 0
 
@@ -66,6 +70,7 @@ class LugarAdapterMod (private var lugares:ArrayList<Lugar>): RecyclerView.Adapt
             view.estadoLugar.text = lugar.estaAbierto()
             view.iconoLugar.text = Categorias.get(lugar.idCategory)!!.icon
             codigoLugar = lugar.id
+
         }
 
         override fun onClick(p0: View?) {
@@ -73,5 +78,8 @@ class LugarAdapterMod (private var lugares:ArrayList<Lugar>): RecyclerView.Adapt
             intent.putExtra("codigo", codigoLugar)
             view.root.context.startActivity(intent)
         }
+
+
     }
+
 }

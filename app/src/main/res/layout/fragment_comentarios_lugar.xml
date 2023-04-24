@@ -4,78 +4,135 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     tools:context=".fragmentos.ComentariosLugarFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="15dp"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
+            android:id="@+id/campo_txt_comentario"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="380dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="30dp"
                 app:boxStrokeWidth="0dp">
 
                 <EditText
                     android:id="@+id/contenido_comentario"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:inputType="textMultiLine"
-                    android:lines="4"
-                    android:gravity="top"
                     android:background="@drawable/fondo_cajones"
-                    android:hint="@string/escribir_comentario" />
+                    android:gravity="top"
+                    android:hint="@string/escribir_comentario"
+                    android:inputType="textMultiLine"
+                    android:lines="4" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+        </LinearLayout>
 
-                <include android:id="@+id/estrellas" layout="@layout/estrellas"/>
-
-                <Button
-                    android:id="@+id/comentar_lugar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="14dp"
-                    android:text="@string/btn_comentar" />
-
-            </RelativeLayout>
-
-    </LinearLayout>
-
-        <View
-            android:id="@+id/divisor"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@color/black"/>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/lista_comentarios"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-        <TextView
-            android:id="@+id/txt_sin_comentarios"
+        <LinearLayout
+            android:id="@+id/estrellas_comentario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:visibility="gone"/>
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
 
-    </FrameLayout>
+            <TextView
+                android:id="@+id/e_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                android:text="\uf005"/>
+
+            <TextView
+                android:id="@+id/e_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                android:text="\uf005"/>
+
+            <TextView
+                android:id="@+id/e_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                android:text="\uf005"/>
+
+            <TextView
+                android:id="@+id/e_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                android:text="\uf005"/>
+
+            <TextView
+                android:id="@+id/e_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                android:text="\uf005"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/campo_txt_comentario">
+
+            <Button
+                android:id="@+id/comentar_lugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:text="@string/btn_comentar" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="25dp"
+            android:textColorHint="@color/black"
+            android:gravity="start"
+            android:textSize="15dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/comentarios_publicados"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lista_comentarios"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
+
+            <TextView
+                android:id="@+id/sin_comentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Aun no hay comentarios en este lugar :)"
+                android:textSize="20dp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

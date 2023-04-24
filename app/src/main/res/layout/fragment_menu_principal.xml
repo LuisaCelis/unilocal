@@ -23,7 +23,9 @@
             android:layout_height="match_parent"
             android:layout_weight="15"
             android:textSize="20sp"
+            android:fontFamily="@font/font_awesome_6_free_solid_900"
             style="@style/Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/black"
             android:text="\uf0c9"/>
 
         <EditText
@@ -43,3 +45,5 @@
 
     </LinearLayout>
 </FrameLayout>
+
+

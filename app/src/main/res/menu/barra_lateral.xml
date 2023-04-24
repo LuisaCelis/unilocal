@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/perfil"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/perfil" />
+
+    <item
+        android:id="@+id/faq"
+        android:icon="@drawable/ic_faq"
+        android:title="@string/faq" />
+
+    <item
+        android:id="@+id/tyc"
+        android:icon="@drawable/ic_tyc"
+        android:title="@string/tyc" />
+
+    <item
+        android:id="@+id/cerrar"
+        android:icon="@drawable/baseline_logout_24"
+        android:title="@string/cerrar" />
+
+</menu>

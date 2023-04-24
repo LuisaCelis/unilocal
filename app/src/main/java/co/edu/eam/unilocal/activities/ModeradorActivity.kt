@@ -6,9 +6,11 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import co.edu.eam.unilocal.R
 import co.edu.eam.unilocal.adapter.ViewModeratorAdapter
+import co.edu.eam.unilocal.databinding.ActivityLoginBinding
 import co.edu.eam.unilocal.databinding.ActivityModeradorBinding
 import co.edu.eam.unilocal.fragmentos.*
 import com.google.android.material.tabs.TabLayoutMediator
+import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
 class ModeradorActivity : AppCompatActivity() {
 
@@ -21,6 +23,8 @@ class ModeradorActivity : AppCompatActivity() {
 
         binding = ActivityModeradorBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.btnCerrar.setOnClickListener { cerrarSesion() }
 
 
         reemplazarFragmento(1, MENU_PENDIENTE)
@@ -72,5 +76,6 @@ class ModeradorActivity : AppCompatActivity() {
         sh.commit()
         finish()
     }
+
 
 }

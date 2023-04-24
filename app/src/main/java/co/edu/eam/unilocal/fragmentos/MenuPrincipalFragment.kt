@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import co.edu.eam.unilocal.R
+import co.edu.eam.unilocal.activities.MainActivity
 import co.edu.eam.unilocal.activities.ResultadoBusquedaActivity
 import co.edu.eam.unilocal.databinding.FragmentMenuPrincipalBinding
 
@@ -32,12 +34,19 @@ class MenuPrincipalFragment : Fragment() {
                     intent.putExtra("texto", busqueda)
                     startActivity(intent)
                 }
-
             }
             true
+
+        }
+
+        binding.btnMenu.setOnClickListener {
+            (requireActivity() as MainActivity).mostrarMenu()
         }
 
         return binding.root
+
     }
+
+
 
 }

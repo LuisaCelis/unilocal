@@ -9,12 +9,15 @@
     android:gravity="center"
     tools:context=".activities.RegistroActivity">
 
-    <!--Aqui va el logo de usuario-->
-    <ImageView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:text="Registrate :)"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_marginBottom="30dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name_layout"
@@ -75,8 +78,16 @@
     <Button
         android:id="@+id/btn_registro"
         android:layout_width="150dp"
-        android:layout_height="70dp"
+        android:layout_height="50dp"
         android:text="@string/txt_btn_registrar"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#F22E52"/>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="-30dp"
+        android:src="@drawable/logo_splash"/>
 
 </LinearLayout>

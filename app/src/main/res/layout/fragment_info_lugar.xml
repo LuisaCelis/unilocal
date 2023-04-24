@@ -31,9 +31,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:textSize="20sp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@color/black"
                 android:layout_marginEnd="10dp"
-                android:layout_centerVertical="true"
-                  />
+                android:layout_centerVertical="true"/>
 
         </RelativeLayout>
 
@@ -49,6 +51,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@color/black"
                 android:text="\uf05a"
                  />
 
@@ -76,6 +81,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@color/black"
                 android:text="\uf017" />
 
             <LinearLayout
@@ -118,6 +126,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@color/black"
                 android:text="\uf124"
                  />
 
@@ -141,6 +152,9 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
+                android:fontFamily="@font/font_awesome_6_free_solid_900"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@color/black"
                 android:text="\uf095" />
 
             <TextView

@@ -5,16 +5,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import co.edu.eam.unilocal.R
 import co.edu.eam.unilocal.databinding.ActivityMainBinding
 import co.edu.eam.unilocal.fragmentos.FavoritosFragment
 import co.edu.eam.unilocal.fragmentos.InicioFragment
 import co.edu.eam.unilocal.fragmentos.MisLugaresFragment
+import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     lateinit var binding: ActivityMainBinding
     private var MENU_INICIO = "inicio"
@@ -39,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
+        binding.navView.setNavigationItemSelectedListener(this)
     }
 
     fun reemplazarFragmento(valor:Int, nombre:String){
@@ -55,6 +58,10 @@ class MainActivity : AppCompatActivity() {
             .addToBackStack(nombre)
             .commit()
 
+    }
+
+    fun mostrarMenu(){
+        binding.drawerLayout.openDrawer(GravityCompat.START)
     }
 
     override fun onBackPressed() {
@@ -77,5 +84,31 @@ class MainActivity : AppCompatActivity() {
         sh.clear()
         sh.commit()
         finish()
+    }
+
+
+    fun irAPerfil(){
+        //jsjsjsj
+    }
+
+    fun irAFAQ(){
+        //dfddfd
+    }
+
+    fun irATYC(){
+        //fgdfgd
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.perfil -> irAPerfil()
+            R.id.faq -> irAFAQ()
+            R.id.tyc -> irATYC()
+            R.id.cerrar -> cerrarSesion()
+        }
+        item.isChecked=true
+        binding.drawerLayout.closeDrawer(GravityCompat.START)
+
+        return true
     }
 }

@@ -1,5 +1,6 @@
 package co.edu.eam.unilocal.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -61,7 +62,12 @@ class RegistroActivity : AppCompatActivity() {
             Usuarios.agregar(usuario)
             Toast.makeText(this,getString(R.string.datos_correctos), Toast.LENGTH_LONG).show()
             Log.e("Registro","El numero de id es: " + Usuarios.darID())
+            cambiarActividad()
         }
 
+    }
+
+    fun cambiarActividad(){
+        startActivity(Intent(this, LoginActivity::class.java))
     }
 }

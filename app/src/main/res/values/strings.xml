@@ -55,10 +55,18 @@
     <string name="header_user">Nickname</string>
     <string name="fecha_comentario">Fecha del comentario</string>
     <string name="contenido_del_comentario">comentario</string>
+    <string name="comentarios_publicados">Comentarios publicados</string>
 
     <!-- Textos fragmento barra inferior moderador -->
     <string name="pendiente">Pendientes</string>
     <string name="aceptado">Aceptados</string>
     <string name="rechazado">Rechazados</string>
+
+    <!-- Textos fragmento barra lateral -->
+    <string name="perfil">Ver Perfil</string>
+    <string name="faq">FAQ</string>
+    <string name="tyc">TyC</string>
+    <string name="cerrar">Cerrar sesión</string>
+
 
 </resources>

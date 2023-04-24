@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:openDrawer="start"
     tools:context=".activities.MainActivity">
 
-    <FrameLayout
-        android:id="@+id/contenido_principal"
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/contenido_principal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/barra_inferior"/>
+
+        <fragment
+            android:id="@+id/barra_superior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            class="co.edu.eam.unilocal.fragmentos.MenuPrincipalFragment" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/barra_inferior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/barra_inferior" />
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_above="@+id/barra_inferior"/>
+        android:layout_gravity="start"
+        app:menu="@menu/barra_lateral"
+        app:headerLayout="@layout/encabezado_menu"/>
 
-    <fragment
-        android:id="@+id/barra_superior"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        class="co.edu.eam.unilocal.fragmentos.MenuPrincipalFragment" />
+</androidx.drawerlayout.widget.DrawerLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/barra_inferior"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/barra_inferior" />
-
-</RelativeLayout>

@@ -1,5 +1,7 @@
 package co.edu.eam.unilocal.activities
 
+import android.content.Intent
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,6 +13,7 @@ import co.edu.eam.unilocal.bd.Categorias
 import co.edu.eam.unilocal.bd.Ciudades
 import co.edu.eam.unilocal.bd.Lugares
 import co.edu.eam.unilocal.databinding.ActivityCrearLugarBinding
+import co.edu.eam.unilocal.fragmentos.MisLugaresFragment
 import co.edu.eam.unilocal.model.Category
 import co.edu.eam.unilocal.model.Ciudad
 import co.edu.eam.unilocal.model.EstadoLugar
@@ -113,8 +116,15 @@ class CrearLugarActivity : AppCompatActivity() {
             Lugares.crear(nuevoLugar)
 
             Toast.makeText(this, getString(R.string.lugar_creado), Toast.LENGTH_LONG).show()
-
+            onBackPressed()
         }
+
+
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 
 }

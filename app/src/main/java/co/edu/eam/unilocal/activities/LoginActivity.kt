@@ -79,6 +79,8 @@ class LoginActivity : AppCompatActivity() {
                         is Moderador -> startActivity( Intent(this, ModeradorActivity::class.java) )
                         is Administrador -> startActivity( Intent(this, AdministradorActivity::class.java) )
                     }
+                    binding.emailUsuario.setText("")
+                    binding.passwordUsuario.setText("")
                 } else{
                     Toast.makeText(this, getString(R.string.datos_incorrectos), Toast.LENGTH_LONG).show()
                 }
