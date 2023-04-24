@@ -1,7 +1,6 @@
 package co.edu.eam.unilocal.bd
 
 import co.edu.eam.unilocal.model.Moderador
-
 object Moderadores {
     private val moderadores:ArrayList<Moderador> = ArrayList()
 

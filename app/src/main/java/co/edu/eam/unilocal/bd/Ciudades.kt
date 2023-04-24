@@ -7,7 +7,7 @@ object Ciudades {
 
     init {
         ciudades.add(Ciudad(1, "Armenia"))
-        ciudades.add(Ciudad(2, "Periera"))
+        ciudades.add(Ciudad(2, "Pereira"))
         ciudades.add(Ciudad(3, "Bogota"))
         ciudades.add(Ciudad(4, "Calarca"))
         ciudades.add(Ciudad(5, "Manizales"))

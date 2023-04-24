@@ -47,4 +47,18 @@
     <string name="info_lugar">Información del lugar</string>
     <string name="comentarios">Comentarios</string>
 
+    <!-- Textos comentario fragment -->
+    <string name="escribir_comentario">Escribe tu comentario</string>
+    <string name="btn_comentar">Comentar</string>
+
+    <!-- Textos comentario -->
+    <string name="header_user">Nickname</string>
+    <string name="fecha_comentario">Fecha del comentario</string>
+    <string name="contenido_del_comentario">comentario</string>
+
+    <!-- Textos fragmento barra inferior moderador -->
+    <string name="pendiente">Pendientes</string>
+    <string name="aceptado">Aceptados</string>
+    <string name="rechazado">Rechazados</string>
+
 </resources>

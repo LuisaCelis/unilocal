@@ -1,127 +1,76 @@
 package co.edu.eam.unilocal.activities
 
-import android.graphics.Canvas
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.ItemTouchHelper
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.Fragment
 import co.edu.eam.unilocal.R
-import co.edu.eam.unilocal.adapter.LugarAdapter
-import co.edu.eam.unilocal.bd.Lugares
+import co.edu.eam.unilocal.adapter.ViewModeratorAdapter
 import co.edu.eam.unilocal.databinding.ActivityModeradorBinding
-import co.edu.eam.unilocal.model.EstadoLugar
-import co.edu.eam.unilocal.model.Lugar
-import com.google.android.material.snackbar.Snackbar
-//import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
+import co.edu.eam.unilocal.fragmentos.*
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ModeradorActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityModeradorBinding
-    lateinit var listaLugares:ArrayList<Lugar>
-    lateinit var adapterLista: LugarAdapter
-
+    lateinit var binding:ActivityModeradorBinding
+    private var MENU_PENDIENTE = "pendiente"
+    private var MENU_ACEPTADO = "aceptado"
+    private var MENU_RECHAZADO = "rechazado"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityModeradorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        listaLugares = Lugares.listarPorEstado(EstadoLugar.SIN_REVISAR)
 
-        adapterLista = LugarAdapter( listaLugares )
-        binding.listaLugares.adapter = adapterLista
-        binding.listaLugares.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        reemplazarFragmento(1, MENU_PENDIENTE)
 
-        crearEventoSwipe()
+        binding.barraInferiorMod.setOnItemSelectedListener {
+            when(it.itemId){
 
+                R.id.lista_pendiente -> reemplazarFragmento(1, MENU_PENDIENTE)
+                R.id.lista_aceptados -> reemplazarFragmento(2, MENU_ACEPTADO)
+                R.id.lista_rechazados -> reemplazarFragmento(3, MENU_RECHAZADO)
+            }
+            true
+        }
     }
 
-    fun crearEventoSwipe(){
+    fun reemplazarFragmento(valor:Int, nombre:String){
 
-        val simpleCallback: ItemTouchHelper.SimpleCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT){
-            override fun onMove(
-                recyclerView: RecyclerView,
-                viewHolder: RecyclerView.ViewHolder,
-                target: RecyclerView.ViewHolder
-            ): Boolean {
-                return false
-            }
-
-            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                var pos = viewHolder.adapterPosition
-                val codigoLugar = listaLugares[pos].id
-                val lugar = Lugares.obtener(codigoLugar)
-
-                when(direction){
-
-                    ItemTouchHelper.LEFT -> {
-
-                        Lugares.cambiarEstado( codigoLugar, EstadoLugar.ACEPTADO )
-                        listaLugares.remove(lugar)
-                        adapterLista.notifyItemRemoved(pos)
-
-                        Snackbar.make(binding.listaLugares, "Lugar aceptado!", Snackbar.LENGTH_LONG)
-                            .setAction("Deshacer", View.OnClickListener {
-                                Lugares.cambiarEstado( codigoLugar, EstadoLugar.SIN_REVISAR )
-                                listaLugares.add(pos, lugar!!)
-                                adapterLista.notifyItemInserted(pos)
-                            }).show()
-                    }
-                    ItemTouchHelper.RIGHT -> {
-
-                        Lugares.cambiarEstado( codigoLugar, EstadoLugar.RECHAZADO )
-                        listaLugares.remove(lugar)
-                        adapterLista.notifyItemRemoved(pos)
-
-                        Snackbar.make(binding.listaLugares, "Lugar rechazado!", Snackbar.LENGTH_LONG)
-                            .setAction("Deshacer", View.OnClickListener {
-                                Lugares.cambiarEstado( codigoLugar, EstadoLugar.SIN_REVISAR )
-                                listaLugares.add(pos, lugar!!)
-                                adapterLista.notifyItemInserted(pos)
-                            }).show()
-                    }
-
-                }
-
-            }
-
-            override fun onChildDraw(
-                c: Canvas,
-                recyclerView: RecyclerView,
-                viewHolder: RecyclerView.ViewHolder,
-                dX: Float,
-                dY: Float,
-                actionState: Int,
-                isCurrentlyActive: Boolean
-            ) {
-                super.onChildDraw(
-                    c,
-                    recyclerView,
-                    viewHolder,
-                    dX,
-                    dY,
-                    actionState,
-                    isCurrentlyActive
-                )
-
-                //RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
-                //    .addSwipeLeftBackgroundColor( ContextCompat.getColor(baseContext, R.color.green) )
-                  //  .addSwipeRightBackgroundColor( ContextCompat.getColor(baseContext, R.color.red) )
-                    //.addSwipeLeftLabel("Aceptar")
-                    //.addSwipeRightLabel("Rechazar")
-                    //.create()
-                    //.decorate()
-
-
-            }
-
+        var fragmento: Fragment = when(valor) {
+            1 -> PendientesFragment()
+            2 -> AceptadosFragment()
+            else -> RechazadosFragment()
         }
 
-        val itemTouchHelper = ItemTouchHelper(simpleCallback)
-        itemTouchHelper.attachToRecyclerView(binding.listaLugares)
+        supportFragmentManager.beginTransaction()
+            .replace( binding.contenidoPrincipal.id, fragmento )
+            .addToBackStack(nombre)
+            .commit()
 
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val count = supportFragmentManager.backStackEntryCount
+
+        if(count > 0) {
+            val nombre = supportFragmentManager.getBackStackEntryAt(count - 1).name
+            when (nombre) {
+                MENU_PENDIENTE -> binding.barraInferiorMod.menu.getItem(0).isChecked = true
+                MENU_ACEPTADO -> binding.barraInferiorMod.menu.getItem(1).isChecked = true
+                else -> binding.barraInferiorMod.menu.getItem(2).isChecked = true
+            }
+        }
+
+    }
+
+    fun cerrarSesion(){
+        val sh = getSharedPreferences("sesion", Context.MODE_PRIVATE).edit()
+        sh.clear()
+        sh.commit()
+        finish()
+    }
+
 }

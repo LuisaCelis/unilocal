@@ -33,7 +33,7 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:layout_centerVertical="true"
-                android:fontFamily="@fonts/font_awesome_6_free_solid_900"  />
+                  />
 
         </RelativeLayout>
 
@@ -50,7 +50,7 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="\uf05a"
-                android:fontFamily="@fonts/font_awesome_6_free_solid_900" />
+                 />
 
             <TextView
                 android:id="@+id/descripcion_lugar"
@@ -76,8 +76,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:text="\uf017"
-                android:fontFamily="@fonts/font_awesome_6_free_solid_900" />
+                android:text="\uf017" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -120,7 +119,7 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="\uf124"
-                android:fontFamily="@fonts/font_awesome_6_free_solid_900" />
+                 />
 
             <TextView
                 android:id="@+id/direccion_lugar"
@@ -142,8 +141,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:text="\uf095"
-                android:fontFamily="@fonts/font_awesome_6_free_solid_900" />
+                android:text="\uf095" />
 
             <TextView
                 android:id="@+id/telefono_lugar"

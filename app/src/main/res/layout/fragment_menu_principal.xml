@@ -22,8 +22,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="15"
-            android:textColor="@color/black"
-            android:fontFamily="@fonts/font_awesome_6_free_solid_900"
             android:textSize="20sp"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:text="\uf0c9"/>

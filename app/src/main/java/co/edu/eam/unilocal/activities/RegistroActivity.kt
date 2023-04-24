@@ -2,11 +2,13 @@ package co.edu.eam.unilocal.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import co.edu.eam.unilocal.R
 import co.edu.eam.unilocal.bd.Usuarios
 import co.edu.eam.unilocal.databinding.ActivityRegistroBinding
 import co.edu.eam.unilocal.model.Usuario
+
 
 class RegistroActivity : AppCompatActivity() {
 
@@ -55,9 +57,10 @@ class RegistroActivity : AppCompatActivity() {
         }
 
         if (name.isNotEmpty() && nickname.isNotEmpty() && nickname.length <= 10 && email.isNotEmpty() && password.isNotEmpty()){
-            val usuario = Usuario(1,name,nickname,email,password)
+            val usuario = Usuario(Usuarios.darID(),name,nickname,email,password)
             Usuarios.agregar(usuario)
             Toast.makeText(this,getString(R.string.datos_correctos), Toast.LENGTH_LONG).show()
+            Log.e("Registro","El numero de id es: " + Usuarios.darID())
         }
 
     }

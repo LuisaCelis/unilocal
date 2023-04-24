@@ -54,6 +54,25 @@ class Lugar (
 
         return mensaje
     }
+    fun obtenerHoraApertura():String{
+
+        val fecha = Calendar.getInstance()
+        val dia = fecha.get(Calendar.DAY_OF_WEEK)
+
+        var mensaje = ""
+        var pos = 0
+
+        for(horario in horarios){
+            pos = horario.diaSemana.indexOf(DiaSemana.values()[dia-1])
+            mensaje = if(pos != -1){"${horario.diaSemana[pos+1].toString().lowercase()} a las ${horario.horaInicio}:00"
+            }else{
+                "${horario.diaSemana[0].toString().lowercase()} a las ${horario.horaInicio}:00"
+            }
+            break
+        }
+
+        return mensaje
+    }
 
     fun obtenerCalificacionPromedio(comentarios:ArrayList<Comentario>):Int{
         var promedio = 0

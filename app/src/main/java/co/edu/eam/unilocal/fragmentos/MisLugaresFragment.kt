@@ -3,6 +3,7 @@ package co.edu.eam.unilocal.fragmentos
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -35,9 +36,10 @@ class MisLugaresFragment : Fragment() {
         if( codigoUsuario != -1 ){
             lista = Lugares.listarPorPropietario(codigoUsuario)
 
-            val adapter = LugarAdapter(lista)
+           val adapter = LugarAdapter(lista)
             binding.listaMisLugares.adapter = adapter
             binding.listaMisLugares.layoutManager = LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
+            Log.e("MisLugaresFrag: ", "lista: " + lista.size)
         }
 
 

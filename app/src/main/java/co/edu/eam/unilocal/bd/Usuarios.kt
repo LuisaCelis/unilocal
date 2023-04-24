@@ -1,5 +1,6 @@
 package co.edu.eam.unilocal.bd
 
+import android.util.Log
 import co.edu.eam.unilocal.model.Usuario
 
 object Usuarios {
@@ -19,9 +20,14 @@ object Usuarios {
 
     fun agregar(usuario: Usuario){
         usuarios.add(usuario)
+        Log.e("Registro activity","usuario con id: " + usuarios.size)
     }
 
     fun obtener(id:Int): Usuario?{
         return usuarios.firstOrNull { u -> u.id == id }
+    }
+
+    fun darID():Int {
+        return usuarios.size+1
     }
 }

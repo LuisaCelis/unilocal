@@ -17,7 +17,7 @@ import co.edu.eam.unilocal.databinding.ItemLugarBinding
 import co.edu.eam.unilocal.R
 import co.edu.eam.unilocal.bd.Comentarios
 
-class LugarAdapter (private var lugares:ArrayList<Lugar>): RecyclerView.Adapter<LugarAdapter.ViewHolder>() {
+class LugarAdapterMod (private var lugares:ArrayList<Lugar>): RecyclerView.Adapter<LugarAdapterMod.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = ItemLugarBinding.inflate( LayoutInflater.from(parent.context), parent, false )
