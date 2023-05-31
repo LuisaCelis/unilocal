@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">unilocal</string>
+
+    <!-- Layout main-->
+    <string name="txt_buscar">Buscar</string>
+    <string name="txt_btn_registro">Registro</string>
+    <string name="txt_btn_login">Acceder</string>
+
+    <!-- Layout login-->
+    <string name="txt_tituloLogin">Iniciar Sesión</string>
+    <string name="txt_email">Correo</string>
+    <string name="txt_password">Contraseña</string>
+
+    <!-- Layout registro-->
+    <string name="txt_tituloRegistro">Registrate :)</string>
+    <string name="txt_name">Nombre</string>
+    <string name="txt_nickname">Nickname</string>
+    <string name="txt_btn_registrar">Registrarse</string>
+    <string name="usuario_creado">Usuario registrado correctamente</string>
+
+    <!-- Layout crear lugar-->
+    <string name="txt_tituloRegistroLugar">Registra tu lugar</string>
+    <string name="txt_namePlace">Nombre</string>
+    <string name="txt_descriptionPlace">Descripción</string>
+    <string name="txt_direccion_lugar">Dirección</string>
+    <string name="txt_phoneNumber">Num celular</string>
+    <string name="txt_btn_crear">Crear</string>
+    <string name="btn_nuevo_lugar">Nuevo lugar</string>
+    <string name="lugar_creado">Lugar creado correctamente. En revisión por un moderador.</string>
+
+    <!-- Textos de validaciones -->
+    <string name="es_obligatorio">Este campo es obligatorio</string>
+    <string name="maximo_caracteres">Máximo 10 caracteres</string>
+    <string name="datos_correctos">Los datos son correctos</string>
+    <string name="datos_incorrectos">Los datos son incorrectos</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Textos del menú inferior -->
+    <string name="inicio">Inicio</string>
+    <string name="mis_lugares">Mis Lugares</string>
+    <string name="favoritos">Favoritos</string>
+
+    <!-- Textos del admin -->
+    <string name="pantalla_admin">Pantalla admin</string>
+    <string name="horarios_del_lugar">Horarios del lugar</string>
+
+    <!-- Textos detalle lugar -->
+    <string name="info_lugar">Información del lugar</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="calificacion">Calificación</string>
+
+    <!-- Textos comentario fragment -->
+    <string name="escribir_comentario">Escribe tu comentario</string>
+    <string name="btn_comentar">Comentar</string>
+    <string name="sin_comentarios">Aun no hay comentarios en este lugar :)</string>
+
+    <!-- Textos comentario -->
+    <string name="header_user">Nickname</string>
+    <string name="fecha_comentario">Fecha del comentario</string>
+    <string name="contenido_del_comentario">comentario</string>
+    <string name="comentarios_publicados">Comentarios publicados</string>
+
+    <!-- Textos fragmento barra inferior moderador -->
+    <string name="pendiente">Pendientes</string>
+    <string name="aceptado">Aceptados</string>
+    <string name="rechazado">Rechazados</string>
+
+    <!-- Textos fragmento barra lateral -->
+    <string name="encabezado">Menu</string>
+    <string name="perfil">Ver Perfil</string>
+    <string name="faq">FAQ</string>
+    <string name="tyc">TyC</string>
+    <string name="cambiar_idioma">Cambiar Idioma</string>
+    <string name="cerrar">Cerrar sesión</string>
+    <string name="horario">Horario</string>
+    <string name="hora_inicio">Hora Inicio</string>
+    <string name="hora_fin">Hora Final</string>
+    <string name="agergar_horario">Agregar Horario</string>
+    <string name="ingresar_datos">Ingresa la informacion necesaria</string>
+    <string name="lugar_aqui">Lugar aquí</string>
+    <string name="ingresar_ubicacion">Seleccione la ubicación</string>
+    <string name="registro_correcto">Registro exitoso</string>
+    <string name="email_enviado">Email enviado</string>
+    <string name="email_error">Error</string>
+    <string name="comentario_publicado">Comentario publicado con exito</string>
+    <string name="ingresar_comentario">Ingrese su comentario y calificación</string>
+    <string name="lugar_eliminado">Lugar eliminado</string>
+    <string name="lugar_fav">Añadido a favoritos</string>
+    <string name="lugar_no_fav">Eliminado de favoritos</string>
+    <string name="lugar_no_revisado">lugar pendiente</string>
+    <string name="lugar_aceptado">Lugar aceptado</string>
+    <string name="lugar_rechazado">Lugar Rechazado</string>
+    <string name="deshacer">Deshacer</string>
+    <string name="loading">Loading...</string>
+    <string name="seleccionar_imagen">Seleccione las fotos de su negocio</string>
+    <string name="seleccionar_archivo">Seleccionar archivo</string>
+    <string name="tomar_foto">Tomar foto</string>
+    <string name="perfil_actualizado">Perfil Actualizado</string>
+    <string name="revisar_correo">Revisa tu email</string>
+    <string name="correo_no_existe">No se encontró el correo</string>
+    <string name="recuperar_contrase_a">Recuperar Contraseña</string>
+    <string name="txt_correo">Correo</string>
+    <string name="enviar_correo">Enviar Correo</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="seleccionar_imagenes">Seleccionar foto</string>
+    <string name="btn_guardar_cambios">Guardar Cambios</string>
+    <string name="categoria_filtro">Categorias</string>
+
+    <!-- item moderador -->
+
+
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/lista_pendiente"
+        android:icon="@drawable/ic_home"
+        android:title="@string/pendiente" />
+
+    <item
+        android:id="@+id/lista_aceptados"
+        android:icon="@drawable/ic_place"
+        android:title="@string/aceptado" />
+
+    <item
+        android:id="@+id/lista_rechazados"
+        android:icon="@drawable/ic_star"
+        android:title="@string/rechazado" />
+
+</menu>

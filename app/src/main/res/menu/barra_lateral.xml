@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/perfil"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/perfil" />
+
+
+    <item
+        android:id="@+id/cambiar_idioma"
+        android:icon="@drawable/ic_cambiar_lenguaje"
+        android:title="@string/cambiar_idioma" />
+
+
+    <item
+        android:id="@+id/cerrar"
+        android:icon="@drawable/baseline_logout_24"
+        android:title="@string/cerrar" />
+
+</menu>

@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">unilocal</string>
+
+    <!-- Layout main-->
+    <string name="txt_buscar">Search</string>
+    <string name="txt_btn_registro">Register</string>
+    <string name="txt_btn_login">Access</string>
+
+    <!-- Layout login-->
+    <string name="txt_tituloLogin">Log in</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_password">Password</string>
+
+    <!-- Layout registro-->
+    <string name="txt_tituloRegistro">Sign up :)</string>
+    <string name="txt_name">Name</string>
+    <string name="txt_nickname">Nickname</string>
+    <string name="txt_btn_registrar">Register</string>
+    <string name="usuario_creado">User successfully registered</string>
+
+    <!-- Layout crear lugar-->
+    <string name="txt_tituloRegistroLugar">Register your place</string>
+    <string name="txt_namePlace">Name</string>
+    <string name="txt_descriptionPlace">Description</string>
+    <string name="txt_direccion_lugar">Address</string>
+    <string name="txt_phoneNumber">Phone Number</string>
+    <string name="txt_btn_crear">Create</string>
+    <string name="btn_nuevo_lugar">New Place</string>
+    <string name="lugar_creado">Place successfully created. Under review by a moderator.</string>
+
+    <!-- Textos de validaciones -->
+    <string name="es_obligatorio">This field is required</string>
+    <string name="maximo_caracteres">Max. 10 characters</string>
+    <string name="datos_correctos">Successful</string>
+    <string name="datos_incorrectos">Wrong</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Textos del menú inferior -->
+    <string name="inicio">Home</string>
+    <string name="mis_lugares">My Places</string>
+    <string name="favoritos">Favorites</string>
+
+    <!-- Textos del admin -->
+    <string name="pantalla_admin">Screen admin</string>
+    <string name="horarios_del_lugar">Site hours</string>
+
+    <!-- Textos detalle lugar -->
+    <string name="info_lugar">Location information</string>
+    <string name="comentarios">Comments</string>
+    <string name="calificacion">Rating</string>
+
+    <!-- Textos comentario fragment -->
+    <string name="escribir_comentario">Write your comment</string>
+    <string name="btn_comentar">Comment</string>
+    <string name="sin_comentarios">There are no comments on this place yet :)</string>
+
+    <!-- Textos comentario -->
+    <string name="header_user">Nickname</string>
+    <string name="fecha_comentario">Comment date</string>
+    <string name="contenido_del_comentario">Comment</string>
+    <string name="comentarios_publicados">Comments posted</string>
+
+    <!-- Textos fragmento barra inferior moderador -->
+    <string name="pendiente">Pending </string>
+    <string name="aceptado">Accepted</string>
+    <string name="rechazado">Declined</string>
+
+    <!-- Textos fragmento barra lateral -->
+    <string name="encabezado">Menu</string>
+    <string name="perfil">View Profile</string>
+    <string name="faq">FAQ</string>
+    <string name="tyc">TyC</string>
+    <string name="cambiar_idioma">Change Language</string>
+    <string name="cerrar">Log out</string>
+    <string name="horario">Horario</string>
+    <string name="hora_inicio">Hora Inicio</string>
+    <string name="hora_fin">Hora Final</string>
+    <string name="agergar_horario">Agregar Horario</string>
+    <string name="ingresar_datos">Ingresa la informacion necesaria</string>
+    <string name="lugar_aqui">Lugar aquí</string>
+    <string name="ingresar_ubicacion">Seleccione la ubicación</string>
+    <string name="registro_correcto">Registro exitoso</string>
+    <string name="email_enviado">Email enviado</string>
+    <string name="email_error">Error</string>
+    <string name="comentario_publicado">Comentario publicado con exito</string>
+    <string name="ingresar_comentario">Ingrese su comentario y calificación</string>
+    <string name="lugar_eliminado">Lugar eliminado</string>
+    <string name="lugar_fav">Añadido a favoritos</string>
+    <string name="lugar_no_fav">Eliminado de favoritos</string>
+    <string name="lugar_no_revisado">lugar pendiente</string>
+    <string name="lugar_aceptado">Lugar aceptado</string>
+    <string name="lugar_rechazado">Lugar Rechazado</string>
+    <string name="deshacer">Deshacer</string>
+    <string name="loading">Loading...</string>
+    <string name="seleccionar_imagen">Seleccione las fotos de su negocio</string>
+    <string name="seleccionar_archivo">Seleccionar archivo</string>
+    <string name="tomar_foto">Tomar foto</string>
+    <string name="perfil_actualizado">Perfil Actualizado</string>
+    <string name="revisar_correo">Revisa tu email</string>
+    <string name="correo_no_existe">No se encontró el correo</string>
+    <string name="recuperar_contrase_a">Recuperar Contraseña</string>
+    <string name="txt_correo">Correo</string>
+    <string name="enviar_correo">Enviar Correo</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="seleccionar_imagenes">Seleccionar foto</string>
+    <string name="categoria_filtro">Categorias</string>
+
+
+</resources>

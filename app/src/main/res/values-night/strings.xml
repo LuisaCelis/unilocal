@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lugar_aqui">Lugar aquí</string>
+    <string name="ingresar_ubicacion">Seleccione la ubicación</string>
+    <string name="registro_correcto">Registro exitoso</string>
+    <string name="email_enviado">Email enviado</string>
+    <string name="email_error">Error</string>
+    <string name="comentario_publicado">Comentario publicado con exito</string>
+    <string name="ingresar_comentario">Ingrese su comentario y calificación</string>
+    <string name="lugar_eliminado">Lugar eliminado</string>
+    <string name="lugar_fav">Añadido a favoritos</string>
+    <string name="lugar_no_fav">Eliminado de favoritos</string>
+    <string name="lugar_no_revisado">lugar pendiente</string>
+    <string name="lugar_aceptado">Lugar aceptado</string>
+    <string name="lugar_rechazado">Lugar Rechazado</string>
+    <string name="deshacer">Deshacer</string>
+    <string name="loading">Loading...</string>
+    <string name="seleccionar_imagen">Seleccione las fotos de su negocio</string>
+    <string name="seleccionar_archivo">Seleccionar archivo</string>
+    <string name="tomar_foto">Tomar foto</string>
+    <string name="perfil_actualizado">Perfil Actualizado</string>
+    <string name="revisar_correo">Revisa tu email</string>
+    <string name="correo_no_existe">No se encontró el correo</string>
+    <string name="recuperar_contrase_a">Recuperar Contraseña</string>
+    <string name="txt_correo">Correo</string>
+    <string name="enviar_correo">Enviar Correo</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="seleccionar_imagenes">Seleccionar foto</string>
+    <string name="categoria_filtro">Categorias</string>
+</resources>
